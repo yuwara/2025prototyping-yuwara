@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 15px; /* 外枠の角を丸くする */
+}
+
+.screen {
+    width: 160px;
+    height: 120px;
+    border: 2px solid gray;
+    background-color: black;
+    margin-bottom: 30px; /* 隙間を広げる */
+    position: relative; /* ラベルの位置調整のために必要 */
+    overflow: hidden; /* 内側の枠からはみ出さないようにする */
+}
+
+.label {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.label.top-left {
+    top: 5px;
+    left: 5px;
+    text-align: center;
+}
+
+.label.top-right {
+    top: 5px;
+    right: 5px;
+    text-align: center;
+}
+
+.japanese-label {
+    font-size: 10px; /* 日本語ラベルのフォントサイズ */
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-bottom: 2px; /* 下の英語ラベルとの間隔 */
+    text-align: center;
+}
+
+.cafelate-coffee {
+    display: block;
+    margin: 5px auto 0;
+    transform: scale(1.1); /* 110%に拡大 */
+    max-width: none; /* サイズ制限を解除 */
+    max-height: none; /* サイズ制限を解除 */
+    width: auto;
+    height: auto;
+}
+
+.coffee-beans {
+    display: block;
+    margin: 5px auto 0;
+    width: 30px; /* サイズ調整 */
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* ボタン間の隙間を追加 */
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: black;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button.left {
+    border-color: white; /* 左下の円の初期の色を白に設定 */
+}
+
+.button.glow {
+    border-color: white; /* 枠線を光らせる */
+    box-shadow: 0 0 10px 2px white; /* 光のエフェクトを枠線に沿わせる */
+}
+
+.button.center {
+    border-color: white;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 画像間の隙間を調整 */
+    margin-top: 10px; /* 上部との間隔を調整 */
+}
+
+.image-row img {
+    max-width: 40px; /* 最大幅を40pxに設定 */
+    max-height: 40px; /* 最大高さを40pxに設定 */
+    object-fit: contain; /* 枠内に収まるように調整 */
+}

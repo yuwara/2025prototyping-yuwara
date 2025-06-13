@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 15px; /* 外枠の角を丸くする */
+}
+
+.screen {
+    width: 160px;
+    height: 120px;
+    border: 2px solid gray;
+    background-color: black;
+    margin-bottom: 30px; /* 隙間を広げる */
+    position: relative; /* ラベルの位置調整のために必要 */
+    overflow: hidden; /* 内側の枠からはみ出さないようにする */
+}
+
+.label {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.label.top-left {
+    top: 5px;
+    left: 5px;
+    text-align: center;
+}
+
+.label.top-right {
+    top: 5px;
+    right: 5px;
+    text-align: center;
+}
+
+.japanese-label {
+    font-size: 10px; /* 日本語ラベルのフォントサイズ */
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-bottom: 2px; /* 下の英語ラベルとの間隔 */
+    text-align: center;
+}
+
+.cafelate-coffee {
+    display: block;
+    margin: 5px auto 0;
+    transform: scale(1.1); /* 110%に拡大 */
+    max-width: none; /* サイズ制限を解除 */
+    max-height: none; /* サイズ制限を解除 */
+    width: auto;
+    height: auto;
+}
+
+.coffee-beans {
+    display: block;
+    margin: 5px auto 0;
+    width: 30px; /* サイズ調整 */
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* ボタン間の隙間を追加 */
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    background-color: black;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button.left {
+    border-color: white; /* 左下の円の初期の色を白に設定 */
+}
+
+.button.glow {
+    border-color: white; /* 枠線を光らせる */
+    box-shadow: 0 0 10px 2px white; /* 光のエフェクトを枠線に沿わせる */
+}
+
+.button.center {
+    border-color: white;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white; /* 色を白に変更 */
+    position: absolute;
+}
+
+.triangle.top-left {
+    top: -15px;
+    left: 20px;
+}
+
+.triangle.top-center {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.triangle.top-right {
+    top: -15px;
+    right: 20px;
+}
+
+.triangle.bottom-right {
+    top: auto; /* 上からの位置指定を解除 */
+    bottom: -15px; /* 下からの位置を指定 */
+    right: 20px; /* 右からの位置を指定 */
+    transform: none; /* 変形を解除 */
+}
+
+.icon {
+    position: absolute;
+    width: 32px; /* 円の横幅(40px)の80% */
+    height: auto;
+}
+
+.icon.top-left {
+    top: -20px;
+    left: 20px;
+}
+
+.icon.top-center {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon.top-right {
+    top: -20px;
+    right: 20px;
+}
+
+.icon.bottom-right {
+    bottom: 100%; /* 円の真上に配置 */
+    right: 50%;
+    transform: translateX(50%); /* 水平方向に中央揃え */
+}
